@@ -33,29 +33,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // E-Induction Modal logic
-    const eInductionBtns = document.querySelectorAll('.e-induction-btn');
-    const modal = document.getElementById('e-induction-modal');
-    const closeModalBtn = document.querySelector('.close-modal');
-
-    if (modal) {
-        eInductionBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                modal.classList.add('show');
+    // Modal logic
+    const setupModal = (btnClass, modalId) => {
+        const btns = document.querySelectorAll(btnClass);
+        const modal = document.getElementById(modalId);
+        
+        if (modal) {
+            const closeBtn = modal.querySelector('.close-modal');
+            
+            btns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    modal.classList.add('show');
+                });
             });
-        });
-
-        if (closeModalBtn) {
-            closeModalBtn.addEventListener('click', () => {
-                modal.classList.remove('show');
+            
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    modal.classList.remove('show');
+                });
+            }
+            
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('show');
+                }
             });
         }
+    };
 
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('show');
-            }
-        });
-    }
+    setupModal('.e-induction-btn', 'e-induction-modal');
+    setupModal('.e-attendent-btn', 'e-attendent-modal');
 });
