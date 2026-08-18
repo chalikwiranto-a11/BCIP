@@ -45,7 +45,14 @@
                     <a href="../HSE/tanggap-darurat.html" class="dropdown-item"><i class="fa-solid fa-truck-medical"></i> Tanggap Darurat</a>
                 </div>
             </li>
-            <li><a href="#" class="nav-link">Layanan</a></li>
+            <li class="dropdown">
+                <a class="nav-link">Layanan <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item e-induction-btn">
+                        <i class="fa-solid fa-chalkboard-user"></i> E-Induction
+                    </a>
+                </div>
+            </li>
             <li><a href="#" class="nav-link">Berita</a></li>
         </ul>
         <div class="menu-toggle">
@@ -143,5 +150,24 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
     <script src="../script.js"></script>
+
+    <!-- E-Induction Modal -->
+    <div id="e-induction-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="../Gambar/e-induction.webp" alt="E-Induction" class="modal-image">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfki_vRWtetunMT1GbCxkTQt23V2u_zFNrzNitY-tTTfn6Q5A/viewform" target="_blank" class="modal-postcard">
+                <div class="postcard-content">
+                    <i class="fa-solid fa-link"></i>
+                    <div>
+                        <h4>Click Here</h4>
+                        <p>to fill the E-Induction Form</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>

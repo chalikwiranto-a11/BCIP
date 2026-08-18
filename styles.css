@@ -771,3 +771,197 @@ ul {
     min-width: 100%;
   }
 }
+
+/* NEWS CARDS */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.news-card {
+  background: var(--color-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.news-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-content {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-title {
+  font-size: 1.2rem;
+  color: var(--color-dark-blue);
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.news-read-more {
+  margin-top: auto;
+  color: var(--color-orange);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.3s ease;
+}
+
+.news-read-more:hover {
+  gap: 12px;
+}
+
+/* E-INDUCTION MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: var(--color-white);
+  margin: auto;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+}
+
+.close-modal {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: var(--color-dark-blue);
+  text-decoration: none;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.modal-postcard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-light-gray);
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: all 0.3s ease;
+  border: 1px solid #eaeaea;
+}
+
+.modal-postcard:hover {
+  background: var(--color-light-green);
+  color: var(--color-white);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(141, 198, 63, 0.3);
+}
+
+.postcard-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.postcard-content i {
+  font-size: 24px;
+  color: var(--color-dark-blue);
+  transition: color 0.3s ease;
+}
+
+.modal-postcard:hover .postcard-content i {
+  color: var(--color-white);
+}
+
+.postcard-content h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--color-dark-blue);
+  transition: color 0.3s ease;
+}
+
+.modal-postcard:hover .postcard-content h4 {
+  color: var(--color-white);
+}
+
+.postcard-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.modal-postcard:hover .postcard-content p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.modal-postcard > i {
+  font-size: 20px;
+  color: var(--color-dark-blue);
+  transition: all 0.3s ease;
+}
+
+.modal-postcard:hover > i {
+  color: var(--color-white);
+  transform: translateX(5px);
+}

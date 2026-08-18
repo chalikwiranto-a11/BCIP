@@ -32,4 +32,30 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // E-Induction Modal logic
+    const eInductionBtns = document.querySelectorAll('.e-induction-btn');
+    const modal = document.getElementById('e-induction-modal');
+    const closeModalBtn = document.querySelector('.close-modal');
+
+    if (modal) {
+        eInductionBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('show');
+            });
+        });
+
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', () => {
+                modal.classList.remove('show');
+            });
+        }
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+    }
 });
