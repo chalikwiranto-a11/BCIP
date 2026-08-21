@@ -34,7 +34,7 @@ def process_file(filepath):
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <img src="{prefix}Gambar/e-induction.webp" alt="E-Induction" class="modal-image">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfki_vRWtetunMT1GbCxkTQt23V2u_zFNrzNitY-tTTfn6Q5A/viewform" target="_blank" class="modal-postcard">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6yhJ-DoB1wTCV9Kqf2IKh2FbkQonKxY3dhzE7QklIJZr9MQ/viewform" target="_blank" class="modal-postcard">
                 <div class="postcard-content">
                     <i class="fa-solid fa-link"></i>
                     <div>
