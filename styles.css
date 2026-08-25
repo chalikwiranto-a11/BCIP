@@ -965,3 +965,18 @@ ul {
   color: var(--color-white);
   transform: translateX(5px);
 }
+
+.postcard-row {
+  display: flex;
+  gap: 15px;
+}
+
+.postcard-row .modal-postcard {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .postcard-row {
+    flex-direction: column;
+  }
+}
