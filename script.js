@@ -38,8 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
     subDropdowns.forEach(subDropdown => {
         subDropdown.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
-                e.stopPropagation();
-                subDropdown.classList.toggle('active');
+                // If clicking the toggle link itself (not inside the menu)
+                if (!e.target.closest('.sub-dropdown-menu')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    subDropdown.classList.toggle('active');
+                }
             }
         });
     });
