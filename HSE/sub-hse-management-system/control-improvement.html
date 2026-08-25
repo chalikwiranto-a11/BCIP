@@ -4,45 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Response - BCIP</title>
+    <title>Control Improvement - HSE BCIP</title>
+    <meta name="description" content="Prosedur dan Tim Tanggap Darurat di Batuta Chemical Industrial Park (BCIP).">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .page-content {
-            padding: 150px 10%;
-            min-height: 100vh;
-        }
-
-        .page-title {
-            color: var(--color-dark-blue);
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 
 <body>
+    <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <a href="../index.html" class="logo">
             <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop,q=95/dOqqPM8w81tpv1go/Logo-BCIP-baru-small-mePPpRnL71H1D2NO.png"
                 alt="BCIP Logo">
         </a>
+
         <ul class="nav-links">
             <li><a href="../index.html" class="nav-link">Beranda</a></li>
             <li class="dropdown">
-                <a class="nav-link" style="color: var(--color-light-green);">Tentang <i
-                        class="fa-solid fa-chevron-down"></i></a>
+                <a class="nav-link">Tentang <i class="fa-solid fa-chevron-down"></i></a>
                 <div class="dropdown-menu">
-                    <a href="komitmen-kebijakan.html" class="dropdown-item"><i class="fa-solid fa-handshake"></i>
-                        Komitmen & Kebijakan</a>
-                    <a href="legal-compliance.html" class="dropdown-item"><i class="fa-solid fa-gavel"></i> Legal
-                        Compliance</a>
-                    <a href="people-competency.html" class="dropdown-item"><i class="fa-solid fa-users"></i> People &
-                        Competency</a>
-                    <a href="emergency-response.html" class="dropdown-item" style="color: var(--color-light-green);"><i
-                            class="fa-solid fa-truck-medical"></i> Emergency Response</a>
-                    <a href="our-core-values.html" class="dropdown-item"><i class="fa-solid fa-star"></i> Our Core
-                        Values</a>
+                    <a href="../tentang/komitmen-kebijakan.html" class="dropdown-item">
+                        <i class="fa-solid fa-handshake"></i> Komitmen & Kebijakan
+                    </a>
+                    <a href="../tentang/legal-compliance.html" class="dropdown-item">
+                        <i class="fa-solid fa-gavel"></i> Legal Compliance
+                    </a>
+                    <a href="../tentang/people-competency.html" class="dropdown-item">
+                        <i class="fa-solid fa-users"></i> People & Competency
+                    </a>
+                    <a href="../tentang/emergency-response.html" class="dropdown-item">
+                        <i class="fa-solid fa-truck-medical"></i> Emergency Response
+                    </a>
+                    <a href="../tentang/our-core-values.html" class="dropdown-item">
+                        <i class="fa-solid fa-star"></i> Our Core Values
+                    </a>
                 </div>
             </li>
             <li class="dropdown">
@@ -105,8 +100,35 @@
                             <a href="../HSE/sub-hse-keamanan/insection-sajam-alcohol-and-drug.html" class="dropdown-item">Insection Sajam, Alcohol and Drug</a>
                         </div>
                     </div>
-                    <a href="../HSE/tanggap-darurat.html" class="dropdown-item"><i
-                            class="fa-solid fa-truck-medical"></i> Tanggap Darurat</a>
+                    <div class="sub-dropdown">
+                        <a href="../HSE/tanggap-darurat.html" class="dropdown-item">
+                            <i class="fa-solid fa-truck-medical"></i> Tanggap Darurat <i class="fa-solid fa-chevron-down sub-dropdown-icon"></i>
+                        </a>
+                        <div class="sub-dropdown-menu">
+                            <a href="../HSE/sub-hse-tanggap-darurat/emergency-respons.html" class="dropdown-item">Emergency Respons</a>
+                            <a href="../HSE/sub-hse-tanggap-darurat/fire-emergency.html" class="dropdown-item">Fire Emergency</a>
+                            <a href="../HSE/sub-hse-tanggap-darurat/chemical-spill.html" class="dropdown-item">Chemical Spill</a>
+                            <a href="../HSE/sub-hse-tanggap-darurat/medichal-emergency.html" class="dropdown-item">Medichal Emergency</a>
+                            <a href="../HSE/sub-hse-tanggap-darurat/eatquake.html" class="dropdown-item">Eatquake</a>
+                            <a href="../HSE/sub-hse-tanggap-darurat/evacuation-drill.html" class="dropdown-item">Evacuation Drill</a>
+                            <a href="../HSE/sub-hse-tanggap-darurat/rescue-drill.html" class="dropdown-item">Rescue drill</a>
+                        </div>
+                    </div>
+                    <div class="sub-dropdown">
+                        <a href="../../HSE/management-system.html" class="dropdown-item">
+                            <i class="fa-solid fa-sitemap"></i> Management System <i class="fa-solid fa-chevron-down sub-dropdown-icon"></i>
+                        </a>
+                        <div class="sub-dropdown-menu">
+                            <a href="../../HSE/sub-hse-management-system/polecy-dan-kebijakan.html" class="dropdown-item">Polecy dan Kebijakan</a>
+                            <a href="../../HSE/sub-hse-management-system/structure-organisasi.html" class="dropdown-item">Structure Organisasi</a>
+                            <a href="../../HSE/sub-hse-management-system/legal-compliance.html" class="dropdown-item">Legal Compliance</a>
+                            <a href="../../HSE/sub-hse-management-system/hse-mangement-system.html" class="dropdown-item">HSE Mangement System</a>
+                            <a href="../../HSE/sub-hse-management-system/hse-digitalization.html" class="dropdown-item">HSE Digitalization</a>
+                            <a href="../../HSE/sub-hse-management-system/hse-improvement.html" class="dropdown-item">HSE Improvement</a>
+                            <a href="../../HSE/sub-hse-management-system/kpi-qhsse-performend.html" class="dropdown-item">KPI QHSSE Performend</a>
+                            <a href="../../HSE/sub-hse-management-system/control-improvement.html" class="dropdown-item">Control Improvement</a>
+                        </div>
+                    </div>
                 </div>
             </li>
             <li class="dropdown">
@@ -125,15 +147,82 @@
             </li>
             <li><a href="../berita.html" class="nav-link">Berita</a></li>
         </ul>
+
         <div class="menu-toggle">
             <i class="fa-solid fa-bars"></i>
         </div>
     </nav>
 
-    <div class="page-content">
-        <h1 class="page-title"><i class="fa-solid fa-truck-medical"></i> Emergency Response</h1>
-        <p>Halaman ini berisi informasi tentang Emergency Response Batuta Chemical Industrial Park.</p>
-    </div>
+    <!-- INNER HERO -->
+    <header class="inner-hero">
+        <div class="inner-hero-content">
+            <h1>Control Improvement</h1>
+            <p>Sistem Manajemen HSE yang terintegrasi, tumpahan bahan kimia, kebakaran, hingga evakuasi medis di
+                area industri.</p>
+        </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <section class="page-content">
+        <div class="section-title">
+            <h2>Kesiapsiagaan adalah Kunci Keselamatan</h2>
+            <p>Kami memiliki Emergency Response Team (ERT) yang terlatih secara khusus untuk menangani berbagai skenario
+                kondisi darurat di fasilitas petrokimia, pembangkit listrik, dan tambang batubara.</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fa-solid fa-truck-fast feature-icon"></i>
+                <h3>Fire & Rescue Team (Tim Pemadam)</h3>
+                <p>Armada mobil pemadam kebakaran (Fire Truck) dengan foam system yang siaga 24 jam untuk menanggulangi
+                    potensi kebakaran bahan kimia (chemical fire) dan area tambang.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-flask-vial feature-icon"></i>
+                <h3>Chemical Spill Response</h3>
+                <p>Prosedur penanganan tumpahan Bahan Berbahaya dan Beracun (B3) menggunakan spill kit khusus, hazmat
+                    suit, dan metode lokalisasi untuk mencegah pencemaran tanah dan air.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-helicopter feature-icon"></i>
+                <h3>Medevac (Medical Evacuation)</h3>
+                <p>Kesiapan ambulans di lokasi serta prosedur evakuasi medis rujukan jalur darat maupun udara
+                    (helikopter) untuk penanganan cepat korban luka berat (LTI).</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-person-running feature-icon"></i>
+                <h3>Sistem Evakuasi Massal</h3>
+                <p>Jaringan alarm peringatan dini (Early Warning System) dan penentuan Muster Point (Titik Kumpul) yang
+                    strategis di seluruh area pabrik dan perkantoran.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-walkie-talkie feature-icon"></i>
+                <h3>Pusat Komando (Crisis Center)</h3>
+                <p>Fasilitas komando darurat terpusat untuk mengkoordinasikan komunikasi antara tim lapangan, manajemen
+                    perusahaan, dan instansi terkait (SAR, Rumah Sakit, Kepolisian).</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-file-contract feature-icon"></i>
+                <h3>Emergency Drill Rutin</h3>
+                <p>Simulasi tanggap darurat (Moc Drill) secara berkala yang melibatkan seluruh karyawan untuk memastikan
+                    mereka paham tindakan evakuasi mandiri saat terjadi insiden.</p>
+            </div>
+        </div>
+
+        <div class="highlight-banner orange-bg">
+            <div class="highlight-content">
+                <h3>Respon Cepat, Tepat, dan Terukur</h3>
+                <p>Insiden dapat terjadi kapan saja. Kecepatan dan ketepatan tindakan Tim Tanggap Darurat BCIP (ERT)
+                    adalah jaminan meminimalisasi kerugian jiwa, aset, dan lingkungan.</p>
+            </div>
+        </div>
+    </section>
+
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -222,6 +311,7 @@
     <a href="https://wa.me/6285388881989" target="_blank" class="wa-float">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
     <script src="../script.js"></script>
 
     <!-- E-Induction Modal -->

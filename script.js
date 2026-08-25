@@ -27,8 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile dropdown toggle
     dropdowns.forEach(dropdown => {
         dropdown.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 768 && !e.target.closest('.sub-dropdown')) {
                 dropdown.classList.toggle('active');
+            }
+        });
+    });
+
+    // Mobile sub-dropdown toggle
+    const subDropdowns = document.querySelectorAll('.sub-dropdown');
+    subDropdowns.forEach(subDropdown => {
+        subDropdown.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.stopPropagation();
+                subDropdown.classList.toggle('active');
             }
         });
     });
