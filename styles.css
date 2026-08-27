@@ -393,12 +393,15 @@ ul {
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     flex-direction: column;
-    padding: 20px 0;
+    align-items: stretch;
+    padding: 10px 0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-150%);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    max-height: 80vh;
+    overflow-y: auto;
   }
 
   .nav-links.active {
@@ -410,10 +413,11 @@ ul {
   .nav-link {
     padding: 15px 20px;
     width: 100%;
-    text-align: left;
+    text-align: center;
     display: block;
   }
 
+  /* Main dropdown menu - override grid to flex column */
   .dropdown-menu {
     position: static;
     box-shadow: none;
@@ -424,40 +428,80 @@ ul {
     transform: none;
     display: none;
     padding: 0;
-    grid-template-columns: 1fr;
     min-width: 100%;
   }
 
   .dropdown.active .dropdown-menu {
-    display: grid;
+    display: flex;
+    flex-direction: column;
   }
 
+  /* Disable desktop hover on mobile */
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  /* Sub-dropdown full width */
+  .sub-dropdown {
+    width: 100%;
+  }
+
+  .sub-dropdown > a {
+    justify-content: center;
+  }
+
+  /* Sub-dropdown menu - override ALL desktop absolute positioning */
   .sub-dropdown-menu {
     position: static;
     box-shadow: none;
     border: none;
-    background: rgba(240, 240, 245, 0.6);
+    background: rgba(235, 237, 245, 0.8);
     border-radius: 8px;
     opacity: 1;
     visibility: visible;
     transform: none;
     display: none;
-    padding: 5px 0;
-    margin: 5px 15px 0 15px;
+    padding: 8px 0;
+    margin: 5px 20px 10px 20px;
+    min-width: unset;
+    width: auto;
+    z-index: auto;
   }
 
+  /* Remove the bridge pseudo-element on mobile */
+  .sub-dropdown-menu::before {
+    display: none;
+  }
+
+  /* Override desktop hover - only show via JS toggle on mobile */
+  .sub-dropdown:hover > .sub-dropdown-menu {
+    display: none;
+  }
+
+  /* Show sub-dropdown only when JS adds active class */
   .sub-dropdown.active .sub-dropdown-menu {
     display: flex;
     flex-direction: column;
   }
 
+  /* Override desktop hover when active */
+  .sub-dropdown.active:hover > .sub-dropdown-menu {
+    display: flex;
+  }
+
+  /* Rotate chevron when sub-dropdown is open */
   .sub-dropdown.active > a .sub-dropdown-icon {
     transform: rotate(180deg);
   }
 
+  /* Dropdown items - centered text */
   .dropdown-item {
     color: var(--color-dark-blue);
     padding: 12px 20px;
+    justify-content: center;
+    text-align: center;
   }
 
   .dropdown-item:hover {
@@ -465,10 +509,17 @@ ul {
     color: var(--color-dark-blue);
   }
 
+  /* Sub-menu items - left aligned inside the sub-dropdown box */
   .sub-dropdown-menu .dropdown-item {
     font-size: 13px;
     padding: 10px 20px;
-    text-align: left;
+    text-align: center;
+    justify-content: center;
+    color: var(--color-dark-blue);
+  }
+
+  .sub-dropdown-menu .dropdown-item:hover {
+    background: rgba(0, 0, 0, 0.08);
   }
 
   .hero-content h1 {
