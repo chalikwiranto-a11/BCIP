@@ -400,6 +400,7 @@ ul {
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     flex-direction: column;
+    align-items: stretch;
     padding: 20px 0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-150%);
@@ -465,6 +466,7 @@ ul {
     color: var(--color-dark-blue);
     padding: 12px 20px;
     text-align: center;
+    justify-content: center;
   }
 
   .dropdown-item:hover {
