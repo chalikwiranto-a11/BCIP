@@ -80,4 +80,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setupModal('.e-induction-btn', 'e-induction-modal');
     setupModal('.e-attendent-btn', 'e-attendent-modal');
     setupModal('.e-tbm-btn', 'e-tbm-modal');
+    setupModal('.e-utility-btn', 'e-utility-modal');
 });
